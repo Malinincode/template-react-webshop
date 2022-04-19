@@ -8,11 +8,13 @@ import {
 import Checkout from './pages/Checkout';
 import Product from './pages/Product';
 import Products from './pages/Products';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path='/checkout' element={<Checkout />}/>
         <Route path='/products' element={<Products />}/>
