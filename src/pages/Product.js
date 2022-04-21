@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from "react-router-dom"
 import styled from 'styled-components';
+import { motion } from "framer-motion"
 import Nav from '../components/Nav';
 
 
@@ -27,27 +28,27 @@ function Product() {
     fetchProduct();
   },[])
 
- 
-
   return (
     <div>
     <Nav />
     <SingleProductParent>
       <Text>
             <article>
-                  <h1>{product.title}</h1>
+                  <H1>{product.title}</H1>
                   <p>Beskrivning: {product.description}</p>
-                  <h3>Lagerstatus: {product.storage} stk i lager</h3>
+                  <h4>Lagerstatus: {product.storage} stk i lager</h4>
                   <h2>Pris: {product.price} SEK</h2>
             </article>
       </Text>
-            <div>
+            <motion.div
+            initial={{x: 70 }}
+            animate={{x: 0}}
+            transition={{duration: 1}}
+            >
             { <Img src={product.url}></Img> }
-            </div>
+            </motion.div>
     </SingleProductParent>
-  </div>
-
- 
+    </div>
   )
 }
 
@@ -58,22 +59,29 @@ border: 2px grey solid;
 margin: 50px 200px;  
 background-color: white;
 height: 500px;
-width: 1300px;
-
+width: 1200px;
 `
 const Text = styled.article`
 display: flex;
 align-self: flex-start;
-
-margin-top: 100px;
+margin-top: 80px;
+margin-left: 40px;
 width: 300px;
+font-family: 'Trebuchet MS';
+font-size: 18px;
 `
 
+const H1 = styled.article`
+font-size: 25px;
+`
+
+
 const Img = styled.img `
- display: flex; 
-width: 720px;
+display: flex; 
+width: 650px;
 height: auto;
-margin-left: 100px;
+margin-left: 50px;
+margin-top: 70px;
 ` 
 
 export default Product

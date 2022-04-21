@@ -9,7 +9,6 @@ import {
 import Checkout from './pages/Checkout';
 import Product from './pages/Product';
 import Products from './pages/Products';
-import Nav from './components/Nav';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -18,10 +17,8 @@ function App() {
     <div className="App">
       <Wrapper>
         <BrowserRouter>
-      
-      <Header /> 
-       
-          <Routes>
+          <Header /> 
+            <Routes>
               <Route path='/checkout' element={<Checkout />}/>
               <Route path='/products' element={<Products />}/>
               <Route path='/products/:id' element={<Product />}/>

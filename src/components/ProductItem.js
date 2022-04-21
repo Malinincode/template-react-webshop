@@ -8,10 +8,10 @@ function ProductItem({product}) {
 
     <ProductOverview>
         <Link to={`/products/${product.id}`}>
-          <h1>{product.title}</h1>
+            <h1>{product.title}</h1>
         </Link>
-          <Img src={product.url}></Img>
-          <h3>Pris {product.price} SEK</h3>
+            <Img src={product.url}></Img>
+            <h3>Pris {product.price} SEK</h3>
     </ProductOverview>
   
       )
@@ -21,7 +21,6 @@ const ProductOverview = styled.article`
 display: flex;
 flex-direction: column;
 border: 2px grey solid; 
-/*  padding: 60px 20px;  */
 margin: 40px; 
 background-color: white;
 `

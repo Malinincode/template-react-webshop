@@ -1,24 +1,27 @@
 import React from 'react'
 import styled from 'styled-components';
+import logo from './velocissimologo.png'; 
 
 
 function Header() {
+  
   return (
-    <HeaderText>
-      
-      <h1>
-        Logotype
-      </h1>
-
-    </HeaderText>
+    <HeaderColor>
+      <img src={logo} alt="Logo" />
+    </HeaderColor>
   )
-}
+  }
 
-const HeaderText = styled.div `
-background-color: white /* rgb(69,77,88) */;
-height: 70px;
-padding: 40px;
+
+const HeaderColor = styled.div `
+background-color: white;
+height: 150px;
 color: grey;
-`
+margin-bottom: 20px;
+` 
 
 export default Header
+
+
+
+
